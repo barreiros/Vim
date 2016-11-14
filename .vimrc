@@ -1,49 +1,44 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" @copyright: Enrique Paredes
-" @licensing:
-"    <MIT License>http://www.opensource.org/licenses/mit-license.php
-"
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""GENERAL OPTIONS"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
-" Bundle conf
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" Custom Bundles
-Bundle 'Lokaltog/vim-easymotion'
-" Bundle 'Shougo/neocomplete.vim'
-" Bundle 'akracun/vitality.vim'
-Bundle 'bling/vim-airline'
-" Bundle 'chase/vim-ansible-yaml'
-" Bundle 'davidhalter/jedi-vim'
-Bundle 'godlygeek/tabular'
-Bundle 'joeytwiddle/vim-multiple-cursors'
-Bundle 'mattn/emmet-vim'
-Bundle 'moll/vim-bbye'
-" Bundle 'rking/ag.vim'
-Bundle 'scrooloose/syntastic'
-" Bundle 'sheerun/vim-polyglot' ¡¡¡Este plugin ralentiza mucho vim!!!
-Bundle 'tomtom/tcomment_vim'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-unimpaired'
-" Bundle 'tpope/vim-vinegar'
-" Bundle 'wikitopian/hardmode'
-Bundle 'wincent/command-t'
-Bundle 'scrooloose/nerdtree'
-" Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'guns/vim-clojure-static'
-Bundle 'guns/vim-clojure-highlight'
-Bundle 'tpope/vim-fireplace'
-Bundle 'tpope/vim-classpath'
-Bundle 'kien/rainbow_parentheses.vim'
-" Bundle 'tpope/vim-surround'
-" Bundle 'vim-scripts/VimClojure'
+Plugin 'VundleVim/Vundle.vim'
 
-filetype plugin indent on         " EOF Bundle conf
+" Custom Plugins
+Plugin 'Lokaltog/vim-easymotion'
+" Plugin 'Shougo/neocomplete.vim'
+" Plugin 'akracun/vitality.vim'
+Plugin 'bling/vim-airline'
+" Plugin 'chase/vim-ansible-yaml'
+" Plugin 'davidhalter/jedi-vim'
+Plugin 'godlygeek/tabular'
+Plugin 'joeytwiddle/vim-multiple-cursors'
+Plugin 'mattn/emmet-vim'
+Plugin 'moll/vim-bbye'
+" Plugin 'rking/ag.vim'
+Plugin 'scrooloose/syntastic'
+" Plugin 'sheerun/vim-polyglot' ¡¡¡Este plugin ralentiza mucho vim!!!
+Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-unimpaired'
+" Plugin 'tpope/vim-vinegar'
+" Plugin 'wikitopian/hardmode'
+Plugin 'wincent/command-t'
+Plugin 'scrooloose/nerdtree'
+" Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'guns/vim-clojure-static'
+Plugin 'guns/vim-clojure-highlight'
+Plugin 'tpope/vim-fireplace'
+Plugin 'tpope/vim-classpath'
+Plugin 'kien/rainbow_parentheses.vim'
+" Plugin 'tpope/vim-surround'
+" Plugin 'vim-scripts/VimClojure'
+
+call vundle#end()
+filetype plugin indent on         " EOF Plugin conf
+
 syntax on 
 
 set shortmess+=I
@@ -242,6 +237,10 @@ inoremap JK <esc>
 cnoremap JK <esc> 
 vnoremap JK <esc> 
 
+" Save file
+cnoremap W w
+vnoremap W w
+
 " Cursor
 nmap J }
 nmap K {
@@ -313,6 +312,7 @@ function! RenameFile()
 endfunction
 map <leader>n :call RenameFile()<cr>
 
+set guifont=Monaco:h12
 
 ""PLUGINS CONFIGURATION"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
